@@ -51,6 +51,28 @@ Facebook no es el único. En general todas las aplicaciones tienen un sistema de
     b. ¿Está resuelto usando polimorfismo?
     c. ¿Hay algún patrón de diseño presente en la solución?
 
+## Explicacion con respecto a la resolucion del codigo y como tome cada punto de requerimiento
+
+1. tome el punto 1 como "un usuario puede desactivar notificaciones de manera global"
+
+2. hice una clase Subject(Tema) donde cualquier usuario se puede registrar, por lo que entendi del ejercicio, solo se envian alertas de subjects.
+
+3. aca hice un sistema donde un usuario se registra a un tema pero puede tener las notificaciones desactivadas.
+
+4. una clase alerta puede enviar a todos los usurios registrados a ese tema que tengan notificaciones activadas el mensaje.
+
+5. la clase alerta puede enviar mensajes a un solo usuario registrado a un subject
+
+6. creation date se crea cuando se instancia la clase, expiration date se debe settear
+
+7. la clase alert la tome como clase padre, pero donde realmente se crean las clases en el informative alert y urgent alert
+
+8. en la clase user alerts existe esa funcionalidad
+
+9. idem al 8
+
+11. no cree un algoritmo como tal, pense el codigo en donde siempre se van a crear alertas en este sistema y no llegara de sistemas externos. Entonces la estructura `lifo`para alertas urgentes lo maneja la clase urgent alerts donde la agrega al principio de la lista. La estructura `fifo`lo hace la clase info alerts, donde agrega la alerta al final de la lista de alertas no leidas del usuario
+
 
 # Ejercicio 2 - Consulta SQL
 
